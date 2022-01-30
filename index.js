@@ -31,7 +31,7 @@ mongo.then(
 
 app.use("/api", apiRoutes);
 
-app.get("/", (req, res) => res.send("wellcome to express"));
+app.get("/", (req, res) => res.send("Scrap Tracker"));
 
 app.listen(port, () => {
   console.log(`App listening on ${port}`);
