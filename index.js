@@ -6,6 +6,10 @@ let apiRoutes = require("./routes");
 let bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 
+const cors = require("cors");
+
+app.use(cors());
+
 app.use(
   bodyParser.urlencoded({
     extended: true,
