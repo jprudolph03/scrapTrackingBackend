@@ -19,7 +19,15 @@ exports.index = (req, res) => {
 //create new lot
 exports.add = (req, res) => {
   let lot = new Lot();
+
   lot.num = req.body.num ? req.body.num : lot.name;
+  lot.totalCoilWeight = req.body.totalCoilWeight
+    ? req.body.totalCoilWeight
+    : lot.totalCoilWeight;
+  lot.STDLoss = req.body.STDLoss ? req.body.STDLoss : lot.STDLoss;
+  lot.singlePartWeight = req.body.singlePartWeight
+    ? req.body.singlePartWeight
+    : lot.singlePartWeight;
 
   //save and check
   lot.save((err) => {
