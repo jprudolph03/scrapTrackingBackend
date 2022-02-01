@@ -5,6 +5,15 @@ const lotSchema = mongoose.Schema({
   num: {
     type: Number,
   },
+  totalCoilWeight: {
+    type: Number,
+  },
+  STDLoss: {
+    type: Number,
+  },
+  singlePartWeight: {
+    type: Number,
+  },
 });
 
 //export lot model
