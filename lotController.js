@@ -24,7 +24,6 @@ exports.add = (req, res) => {
   lot.totalCoilWeight = req.body.totalCoilWeight
     ? req.body.totalCoilWeight
     : lot.totalCoilWeight;
-  lot.STDLoss = req.body.STDLoss ? req.body.STDLoss : lot.STDLoss;
   lot.singlePartWeight = req.body.singlePartWeight
     ? req.body.singlePartWeight
     : lot.singlePartWeight;
@@ -55,6 +54,9 @@ exports.update = (req, res) => {
   Lot.findById(req.params.lot_id, (err, lot) => {
     if (err) res.send(err);
     lot.num = req.body.num ? req.body.num : lot.num;
+    lot.singlePartWeight = req.body.singlePartWeight
+      ? req.body.singlePartWeight
+      : lot.singlePartWeight;
     //save and check
     lot.save((err) => {
       if (err) res.json(err);

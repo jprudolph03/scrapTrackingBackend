@@ -1,10 +1,12 @@
 let router = require("express").Router();
 
-//import lot controller
+//import controllers
 const lotController = require("./lotController");
+const partController = require("./partController");
 
-//lot routes
+//routes
 router.route("/lot").get(lotController.index).post(lotController.add);
+router.route("/part").get(partController.index).post(partController.add);
 
 //default API response
 router.get("/", (req, res) => {
@@ -20,5 +22,12 @@ router
   .patch(lotController.update)
   .put(lotController.update)
   .delete(lotController.delete);
+
+router
+  .route("/part/:part_id")
+  .get(partController.view)
+  .patch(partController.update)
+  .put(partController.update)
+  .delete(partController.delete);
 
 module.exports = router;
