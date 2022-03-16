@@ -27,6 +27,18 @@ exports.add = (req, res) => {
   lot.singlePartWeight = req.body.singlePartWeight
     ? req.body.singlePartWeight
     : lot.singlePartWeight;
+  lot.ForgingScrap = req.body.ForgingScrap
+    ? req.body.ForgingScrap
+    : lot.ForgingScrap;
+  lot.ForgingCounterTotal = req.body.ForgingCounterTotal
+    ? req.body.ForgingCounterTotal
+    : lot.ForgingCounterTotal;
+  lot.PressingScrap = req.body.PressingScrap
+    ? req.body.PressingScrap
+    : lot.PressingScrap;
+  lot.PressingCounterTotal = req.body.PressingCounterTotal
+    ? req.body.PressingCounterTotal
+    : lot.PressingCounterTotal;
 
   //save and check
   lot.save((err) => {
@@ -57,6 +69,19 @@ exports.update = (req, res) => {
     lot.singlePartWeight = req.body.singlePartWeight
       ? req.body.singlePartWeight
       : lot.singlePartWeight;
+    lot.ForgingScrap = req.body.ForgingScrap
+      ? req.body.ForgingScrap
+      : lot.ForgingScrap;
+    lot.ForgingCounterTotal = req.body.ForgingCounterTotal
+      ? req.body.ForgingCounterTotal
+      : lot.ForgingCounterTotal;
+    lot.PressingScrap = req.body.PressingScrap
+      ? req.body.PressingScrap
+      : lot.PressingScrap;
+    lot.PressingCounterTotal = req.body.PressingCounterTotal
+      ? req.body.PressingCounterTotal
+      : lot.PressingCounterTotal;
+
     //save and check
     lot.save((err) => {
       if (err) res.json(err);

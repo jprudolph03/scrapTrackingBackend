@@ -11,6 +11,21 @@ const lotSchema = mongoose.Schema({
   singlePartWeight: {
     type: Number,
   },
+  ExpectedTotal: {
+    type: Number,
+  },
+  ForgingScrap: {
+    type: Number,
+  },
+  ForgingCounterTotal: {
+    type: Number,
+  },
+  PressingScrap: {
+    type: Number,
+  },
+  PressingCounterTotal: {
+    type: Number,
+  },
 });
 
 //export lot model

@@ -8,6 +8,9 @@ const partSchema = mongoose.Schema({
   STDLoss: {
     type: Number,
   },
+  lotPrefix: {
+    type: Number,
+  },
 });
 
 //export lot model
