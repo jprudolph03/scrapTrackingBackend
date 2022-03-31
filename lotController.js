@@ -39,6 +39,7 @@ exports.add = (req, res) => {
   lot.PressingCounterTotal = req.body.PressingCounterTotal
     ? req.body.PressingCounterTotal
     : lot.PressingCounterTotal;
+  lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
 
   //save and check
   lot.save((err) => {
@@ -81,7 +82,7 @@ exports.update = (req, res) => {
     lot.PressingCounterTotal = req.body.PressingCounterTotal
       ? req.body.PressingCounterTotal
       : lot.PressingCounterTotal;
-
+    lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
     //save and check
     lot.save((err) => {
       if (err) res.json(err);

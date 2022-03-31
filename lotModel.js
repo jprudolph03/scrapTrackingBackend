@@ -11,9 +11,6 @@ const lotSchema = mongoose.Schema({
   singlePartWeight: {
     type: Number,
   },
-  ExpectedTotal: {
-    type: Number,
-  },
   ForgingScrap: {
     type: Number,
   },
@@ -24,6 +21,9 @@ const lotSchema = mongoose.Schema({
     type: Number,
   },
   PressingCounterTotal: {
+    type: Number,
+  },
+  eXt: {
     type: Number,
   },
 });
