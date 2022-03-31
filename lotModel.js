@@ -5,6 +5,9 @@ const lotSchema = mongoose.Schema({
   num: {
     type: Number,
   },
+  partName: {
+    type: String,
+  },
   totalCoilWeight: {
     type: Number,
   },
