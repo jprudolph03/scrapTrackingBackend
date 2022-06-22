@@ -1,4 +1,5 @@
 let express = require("express");
+let cors = require("cors");
 let app = express();
 let port = process.env.PORT || 8080;
 let apiRoutes = require("./routes");
