@@ -1,5 +1,5 @@
 let express = require("express");
-let cors = require("cors");
+// let cors = require("cors");
 let app = express();
 let port = process.env.PORT || 8080;
 let apiRoutes = require("./routes");
@@ -7,7 +7,7 @@ let apiRoutes = require("./routes");
 let bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 
-const cors = require("cors");
+// const cors = require("cors");
 
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+// app.use(cors());
 
 app.use(
   bodyParser.urlencoded({
