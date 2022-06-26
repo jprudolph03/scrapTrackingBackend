@@ -26,6 +26,18 @@ const lotSchema = mongoose.Schema({
   PressingCounterTotal: {
     type: Number,
   },
+  TappingCounterTotal: {
+    type: Number,
+  },
+  TappingScrap: {
+    type: Number,
+  },
+  VSPackCounterTotal: {
+    type: Number,
+  },
+  VSPackScrap: {
+    type: Number,
+  },
   eXt: {
     type: Number,
   },

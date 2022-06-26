@@ -40,6 +40,19 @@ exports.add = (req, res) => {
   lot.PressingCounterTotal = req.body.PressingCounterTotal
     ? req.body.PressingCounterTotal
     : lot.PressingCounterTotal;
+  lot.TappingCounterTotal = req.body.TappingCounterTotal
+    ? req.body.TappingCounterTotal
+    : lot.TappingCounterTotal;
+  lot.TappingScrap = req.body.TappingScrap
+    ? req.body.TappingScrap
+    : lot.TappingScrap;
+
+  lot.VSPackCounterTotal = req.body.VSPackCounterTotal
+    ? req.body.VSPackCounterTotal
+    : lot.VSPackCounterTotal;
+  lot.VSPackScrap = req.body.VSPackScrap
+    ? req.body.VSPackScrap
+    : lot.VSPackScrap;
   lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
 
   //save and check
@@ -84,6 +97,20 @@ exports.update = (req, res) => {
     lot.PressingCounterTotal = req.body.PressingCounterTotal
       ? req.body.PressingCounterTotal
       : lot.PressingCounterTotal;
+    lot.TappingCounterTotal = req.body.TappingCounterTotal
+      ? req.body.TappingCounterTotal
+      : lot.TappingCounterTotal;
+    lot.TappingScrap = req.body.TappingScrap
+      ? req.body.TappingScrap
+      : lot.TappingScrap;
+
+    lot.VSPackCounterTotal = req.body.VSPackCounterTotal
+      ? req.body.VSPackCounterTotal
+      : lot.VSPackCounterTotal;
+    lot.VSPackScrap = req.body.VSPackScrap
+      ? req.body.VSPackScrap
+      : lot.VSPackScrap;
+
     lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
     //save and check
     lot.save((err) => {
