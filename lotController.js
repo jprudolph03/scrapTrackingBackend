@@ -34,18 +34,28 @@ exports.add = (req, res) => {
   lot.ForgingCounterTotal = req.body.ForgingCounterTotal
     ? req.body.ForgingCounterTotal
     : lot.ForgingCounterTotal;
+  lot.ForgingNote = req.body.ForgingNote
+    ? req.body.ForgingNote
+    : lot.ForgingNote;
+
   lot.PressingScrap = req.body.PressingScrap
     ? req.body.PressingScrap
     : lot.PressingScrap;
   lot.PressingCounterTotal = req.body.PressingCounterTotal
     ? req.body.PressingCounterTotal
     : lot.PressingCounterTotal;
+  lot.PressingNote = req.body.PressingNote
+    ? req.body.PressingNote
+    : lot.PressingNote;
   lot.TappingCounterTotal = req.body.TappingCounterTotal
     ? req.body.TappingCounterTotal
     : lot.TappingCounterTotal;
   lot.TappingScrap = req.body.TappingScrap
     ? req.body.TappingScrap
     : lot.TappingScrap;
+  lot.TappingNote = req.body.PressingNote
+    ? req.body.TappingNote
+    : lot.TappingNote;
 
   lot.VSPackCounterTotal = req.body.VSPackCounterTotal
     ? req.body.VSPackCounterTotal
@@ -53,6 +63,7 @@ exports.add = (req, res) => {
   lot.VSPackScrap = req.body.VSPackScrap
     ? req.body.VSPackScrap
     : lot.VSPackScrap;
+  lot.VSPackNote = req.body.VSPackNote ? req.body.VSPackNote : lot.VSPackNote;
   lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
 
   //save and check
@@ -91,18 +102,27 @@ exports.update = (req, res) => {
     lot.ForgingCounterTotal = req.body.ForgingCounterTotal
       ? req.body.ForgingCounterTotal
       : lot.ForgingCounterTotal;
+    lot.ForgingNote = req.body.ForgingNote
+      ? req.body.ForgingNote
+      : lot.ForgingNote;
     lot.PressingScrap = req.body.PressingScrap
       ? req.body.PressingScrap
       : lot.PressingScrap;
     lot.PressingCounterTotal = req.body.PressingCounterTotal
       ? req.body.PressingCounterTotal
       : lot.PressingCounterTotal;
+    lot.PressingNote = req.body.PressingNote
+      ? req.body.PressingNote
+      : lot.PressingNote;
     lot.TappingCounterTotal = req.body.TappingCounterTotal
       ? req.body.TappingCounterTotal
       : lot.TappingCounterTotal;
     lot.TappingScrap = req.body.TappingScrap
       ? req.body.TappingScrap
       : lot.TappingScrap;
+    lot.TappingNote = req.body.PressingNote
+      ? req.body.TappingNote
+      : lot.TappingNote;
 
     lot.VSPackCounterTotal = req.body.VSPackCounterTotal
       ? req.body.VSPackCounterTotal
@@ -110,7 +130,7 @@ exports.update = (req, res) => {
     lot.VSPackScrap = req.body.VSPackScrap
       ? req.body.VSPackScrap
       : lot.VSPackScrap;
-
+    lot.VSPackNote = req.body.VSPackNote ? req.body.VSPackNote : lot.VSPackNote;
     lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
     //save and check
     lot.save((err) => {

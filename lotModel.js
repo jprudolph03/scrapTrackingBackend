@@ -20,11 +20,17 @@ const lotSchema = mongoose.Schema({
   ForgingCounterTotal: {
     type: Number,
   },
+  ForgingNote: {
+    type: String,
+  },
   PressingScrap: {
     type: Number,
   },
   PressingCounterTotal: {
     type: Number,
+  },
+  PressingNote: {
+    type: String,
   },
   TappingCounterTotal: {
     type: Number,
@@ -32,11 +38,17 @@ const lotSchema = mongoose.Schema({
   TappingScrap: {
     type: Number,
   },
+  TappingNote: {
+    type: String,
+  },
   VSPackCounterTotal: {
     type: Number,
   },
   VSPackScrap: {
     type: Number,
+  },
+  VSPackNote: {
+    type: String,
   },
   eXt: {
     type: Number,
