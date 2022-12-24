@@ -53,6 +53,9 @@ const lotSchema = mongoose.Schema({
   eXt: {
     type: Number,
   },
+  DPTLoss: {
+    type: Number,
+  },
 });
 
 //export lot model

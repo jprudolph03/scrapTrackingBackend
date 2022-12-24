@@ -66,6 +66,8 @@ exports.add = (req, res) => {
   lot.VSPackNote = req.body.VSPackNote ? req.body.VSPackNote : lot.VSPackNote;
   lot.eXt = req.body.eXt ? req.body.eXt : lot.eXt;
 
+  lot.DPTLoss = req.body.DPTLoss ? req.body.DPTLoss : lot.DPTLoss;
+
   //save and check
   lot.save((err) => {
     if (err) res.json(err);
