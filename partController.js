@@ -23,6 +23,9 @@ exports.add = (req, res) => {
   part.name = req.body.name ? req.body.name : part.name;
   part.lotPrefix = req.body.lotPrefix ? req.body.lotPrefix : part.lotPrefix;
   part.STDLoss = req.body.STDLoss ? req.body.STDLoss : lot.STDLoss;
+  part.DPTLoss = req.body.DPTLoss ? req.body.DPTLoss : lot.DPTLoss;
+  part.material = req.body.material ? req.body.material : lot.material;
+  part.machType = req.body.machType ? req.body.machType : lot.machType;
 
   //save and check
   part.save((err) => {

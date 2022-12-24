@@ -11,6 +11,15 @@ const partSchema = mongoose.Schema({
   lotPrefix: {
     type: Number,
   },
+  DPTLoss: {
+    type: Number,
+  },
+  material: {
+    type: String,
+  },
+  machType: {
+    type: String,
+  },
 });
 
 //export lot model
