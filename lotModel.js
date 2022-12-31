@@ -20,6 +20,9 @@ const lotSchema = mongoose.Schema({
   ForgingCounterTotal: {
     type: Number,
   },
+  PercentForgingLost: {
+    type: Number,
+  },
   ForgingNote: {
     type: String,
   },

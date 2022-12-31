@@ -37,6 +37,7 @@ exports.add = (req, res) => {
   lot.ForgingNote = req.body.ForgingNote
     ? req.body.ForgingNote
     : lot.ForgingNote;
+    lot.PercentForgingLost = req.body.PercentForgingLost ? req.body.PercentForgingLost : lot.PercentForgingLost;
 
   lot.PressingScrap = req.body.PressingScrap
     ? req.body.PressingScrap
@@ -107,6 +108,7 @@ exports.update = (req, res) => {
     lot.ForgingNote = req.body.ForgingNote
       ? req.body.ForgingNote
       : lot.ForgingNote;
+      lot.PercentForgingLost = req.body.PercentForgingLost ? req.body.PercentForgingLost : lot.PercentForgingLost;
     lot.PressingScrap = req.body.PressingScrap
       ? req.body.PressingScrap
       : lot.PressingScrap;
